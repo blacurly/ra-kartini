@@ -1,0 +1,11 @@
+services:
+  ai-advisor:
+    image: 996690/ai-advisor:1.0
+    container_name: ai-advisor
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./storage:/app/storage
+    restart: unless-stopped
