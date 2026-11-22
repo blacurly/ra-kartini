@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAKUPUAN: Dokumen Pengumpulan</title>
+<style>
+:root{--bg:#fbf7f3;--card:#fff;--tx:#1e2b24;--mu:#5b6b62;--bd:#e8e0d6;--g:#1f5932;--p:#c71c63;--pb:#ff4b93;--ok:#eaf3ec;--code:#f3efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#121a15;--card:#1b261f;--tx:#e9efe9;--mu:#a5b3a9;--bd:#2c3b31;--g:#7fd49a;--p:#ff8fbb;--pb:#ff4b93;--ok:#1f3a29;--code:#101712}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.6 system-ui,sans-serif}
+.w{max-width:960px;margin:0 auto;padding:24px 18px 64px}
+h1{font-size:28px;margin:0 0 4px;color:var(--g)}h2{font-size:20px;margin:0;color:var(--g)}h3{font-size:14px;margin:18px 0 6px;color:var(--p)}h4{font-size:12px;margin:0px 0 6px;color:var(--p)}
+p{margin:6px 0}.mu{color:var(--mu)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin:18px 0}
+.nav{display:block;padding:12px 14px;background:var(--card);border:1px solid var(--bd);border-radius:12px;color:var(--tx);text-decoration:none;font-weight:600}
+.nav small{display:block;font-weight:400;color:var(--mu)}.nav:hover{border-color:var(--pb)}
+.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden;margin:6px 0 2px}.bar i{display:block;height:100%;width:0;background:var(--g)}
+section{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;margin:14px 0;scroll-margin-top:12px}
+.hd{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.btn,button{font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:9px;border:1px solid var(--g);background:none;color:var(--g);cursor:pointer;text-decoration:none}
+.btn.main{background:var(--g);color:var(--bg)}.btn.off{opacity:.45;pointer-events:none;border-style:dashed}
+button.on{background:var(--ok);border-color:var(--g)}
+.acts{display:flex;gap:6px;flex-wrap:wrap}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0}th,td{border:1px solid var(--bd);padding:6px 8px;text-align:left;vertical-align:top}th{background:var(--ok)}
+.tw{overflow-x:auto}
+pre{background:var(--code);border:1px solid var(--bd);border-radius:10px;padding:12px;overflow:auto;font-size:12px;line-height:1.5;margin:6px 0;white-space:pre-wrap}
+code{font-size:12.5px;background:var(--code);padding:1px 5px;border-radius:5px}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0}.flow span{background:var(--ok);border:1px solid var(--bd);border-radius:9px;padding:5px 10px;font-size:13px}.flow b{color:var(--mu)}
+.note{border-left:3px solid var(--pb);padding:4px 10px;background:var(--code);border-radius:0 8px 8px 0;font-size:13px}
+ul{margin:4px 0;padding-left:20px}details summary{cursor:pointer;font-weight:600;margin:8px 0}img{max-width:100%;border-radius:10px;border:1px solid var(--bd)}
+</style>
+</head>
+<body><div class="w">
+<h1>SAKUPUAN</h1>
+<p class="mu">Dapur Tenang, Dompet Senang.</p> 
+<p class="mu">Kumpulan dokumen pengumpulan final project Bootcamp AI Full-Stack Web Development 2026. Klik kartu untuk melompat ke bagian, klik tombol "Buka" untuk tautan.</p>
+
+<div class="grid">
+<a class="nav" href="#prd">1. BRD / PRD<small>Kebutuhan produk</small></a>
+<a class="nav" href="#stories">2. User Story<small>8 cerita pengguna</small></a>
+<a class="nav" href="#flow">3. User Flow<small>Alur pengguna</small></a>
+<a class="nav" href="#figma">4. Prototype Figma<small>Tautan</small></a>
+<a class="nav" href="#erd">5. ERD / Skema<small>Tabel database</small></a>
+<a class="nav" href="#sql">6. SQL & Seed<small>Opsional</small></a>
+<a class="nav" href="#api">7. Dokumentasi API<small>Endpoint</small></a>
+<a class="nav" href="#ai">8. Dokumentasi AI<small>Fitur AI</small></a>
+<a class="nav" href="#github">9. GitHub & README<small>Repositori</small></a>
+<a class="nav" href="#vercel">10. Website Vercel<small>Tautan</small></a>
+<a class="nav" href="#deck">11. Deck Presentasi<small>Tautan</small></a>
+</div>
+
+<section id="prd"><div class="hd"><h2>1. BRD / PRD</h2><div class="acts"><a class="btn main" data-link="prd">Buka dokumen lengkap</a><button data-k="prd"></button></div></div>
+<h3>Masalah</h3><p>Ibu rumah tangga perkotaan yang memegang uang belanja dengan jadwal pemasukan tetap sulit mengetahui lebih awal apakah uang belanja pangan cukup sampai pemasukan berikutnya. Harga pangan berubah-ubah, pencatatan terasa memberatkan, dan kekurangan baru diketahui saat uang menipis, lalu ditutup dengan tabungan atau pinjaman yang dapat mengganggu arus kas periode berikutnya.</p>
+<h3>Tujuan produk</h3><ul><li>Mengetahui sisa uang belanja hingga periode berikutnya.</li><li>Pencatatan ringan lewat Telegram.</li><li>Membantu mengantisipasi perubahan harga pangan.</li><li>Memberi inspirasi pemasukan tambahan bagi yang pengeluarannya sulit ditekan.</li></ul>
+<h3>Pengguna & cakupan</h3><p>Persona: Vivin, 35 tahun, ibu rumah tangga, memegang uang belanja keluarga. Versi awal mendukung pemasukan berjadwal tetap (bulanan atau mingguan) di wilayah perkotaan; jadwal tidak tetap belum didukung.</p>
+<h3>Fitur & prioritas</h3><div class="tw"><table><tr><th>Fitur</th><th>Isi</th><th>Tahap</th></tr>
+<tr><td>Monitoring pengeluaran</td><td>Catat, kategori, anggaran, bot Telegram</td><td>Utama</td></tr>
+<tr><td>Pantau dan aksi</td><td>Sisa uang, indikator sisa belanja pangan, skor finansial</td><td>Utama</td></tr>
+<tr><td>Prediksi harga pangan</td><td>Data PIHPS dan model ML, tampil sebagai perkiraan</td><td>Kedua</td></tr>
+<tr><td>Saran AI dan pemasukan tambahan</td><td>Saran dari skor, katalog ide dikurasi</td><td>Kedua</td></tr></table></div>
+<h3>Metrik keberhasilan</h3><ul><li>Frekuensi pencatatan per minggu dan pengguna kembali di minggu kedua.</li><li>Waktu per pencatatan (detik) dan skor kegunaan (SUS).</li><li>Persentase pengguna yang menyesuaikan belanja setelah melihat indikator.</li><li>Selisih anggaran dan realisasi pangan per minggu.</li></ul>
+<h3>Di luar cakupan & batasan</h3><p>Akun bersama pasangan, pemasukan harian atau tidak tetap, dan klaim perbaikan ekonomi keluarga. Prediksi adalah perkiraan, saran usaha adalah inspirasi, dan SAKUPUAN bukan nasihat keuangan.</p></section>
+
+<section id="stories"><div class="hd"><h2>2. User Story</h2><div class="acts"><a class="btn main" data-link="stories">Buka dokumen lengkap</a><button data-k="stories"></button></div></div>
+<div class="tw"><table><tr><th>ID</th><th>Sebagai ibu rumah tangga, saya ingin</th><th>Agar</th><th>Kriteria penerimaan</th></tr>
+<tr><td>US-1</td><td>mendaftar dan mengisi jadwal serta jumlah uang belanja</td><td>perhitungan sesuai kondisi saya</td><td>Daftar berhasil; periode terbentuk dari jadwal</td></tr>
+<tr><td>US-2</td><td>mencatat belanja lewat website</td><td>pengeluaran terekam</td><td>Catatan tampil di daftar dan mengurangi sisa uang</td></tr>
+<tr><td>US-3</td><td>mencatat lewat Telegram dengan satu pesan</td><td>tidak perlu membuka website</td><td>"sayur 35000" menjadi catatan setelah konfirmasi</td></tr>
+<tr><td>US-4</td><td>melihat sisa uang dan sisa hari</td><td>tahu apakah uang cukup</td><td>Sisa dan rata-rata per hari tampil di beranda dan /sisa</td></tr>
+<tr><td>US-5</td><td>melihat perkiraan harga pangan</td><td>bersiap sebelum berbelanja</td><td>Tampil sebagai rentang atau arah, berlabel perkiraan</td></tr>
+<tr><td>US-6</td><td>melihat skor dan statusnya</td><td>memahami kondisi periode ini</td><td>Skor 0-100, status, peringatan arus kas, label sementara</td></tr>
+<tr><td>US-7</td><td>menerima saran singkat dari AI</td><td>tahu langkah berikutnya</td><td>Saran muncul; bila AI gagal, saran cadangan tampil</td></tr>
+<tr><td>US-8</td><td>melihat ide pemasukan tambahan saat skor 0-39</td><td>punya pilihan lain</td><td>Muncul setelah saya menekan tombol; ide dari katalog (?)</td></tr></table></div></section>
+
+<section id="flow"><div class="hd"><h2>3. User Flow</h2><div class="acts"><a class="btn main" data-link="flow">Buka dokumen lengkap</a><button data-k="flow"></button></div></div>
+<h3>Alur daftar</h3><div class="flow"><span>Landing</span><b>›</b><span>Daftar</span><b>›</b><span>Hubungkan Telegram</span><b>›</b><span>Dashboard</span></div>
+<h3>Alur masuk</h3><div class="flow"><span>Landing</span><b>›</b><span>Login</span><b>›</b><span>Insight</span></div>
+<h3>Mencatat</h3><div class="flow"><span>Telegram Bot</span><b>›</b><span>Catat via chat (pemasukan/pengeluaran), kirim "sayur 3500"</span><b>›</b><span>Konfirmasi Ya</span><b>›</b><span>Tersimpan, tampil di website</span></div>
+<h3>Skor dan saran</h3><h4>Skor < 40 </h4><div class="flow"><span>Landing</span><b>›</b><span>login</span><b>›</b><span>insight</span><b>›</b><span>Dashboard</span><b>›</b><span>Skor</span><b>›</b><span>Lihat deskripsi</span><b>
+  ›</b><span>Saran AI ide pemasukan dari katalog</span><b>›</b><span>Tombol "+ Simpan ke Action Plan"</span><b>›</b><span>Action Plan</span></div><h4>Skor > 39</h4><div class="flow"><span>Landing</span><b>›</b><span>login</span><b>›</b><span>insight</span><b>›</b><span>Dashboard</span><b>›</b><span>Skor</span><b>›</b><span>Lihat deskripsi</span><b>
+  ›</b><span>Saran AI</span><b>›</b><span>Tombol "+ Simpan ke Action Plan"</span><b>›</b><span>Action Plan</span></div>
+
+
+
+<section id="figma"><div class="hd"><h2>4. Prototype Figma</h2><div class="acts"><a class="btn main" data-link="figma">Buka prototype</a><button data-k="figma"></button></div></div></section>
+
+<section id="erd"><div class="hd"><h2>5. ERD / Skema</h2><div class="acts"><a class="btn main" data-link="erd">Buka ERD</a><button data-k="erd"></button></div></div>
+<div style="margin-top: 2px; padding: 2px; background: #fff;"></div>
+<img src="ERD-SAKUPUAN.png" alt="ERD SakuPuan" onerror="this.style.display='none'"></section>
+<h3>Kelompok tabel</h3><div class="tw"><table><tr><th>Kelompok</th><th>Tabel</th></tr>
+<tr><td>Akun dan bot</td><td>auth.users, users, bot_users, telegram_link_codes, telegram_processed_updates, telegram_pending_entries</td></tr>
+<tr><td>Keuangan</td><td>transactions, budgets</td></tr>
+<tr><td>Skor dan saran</td><td>health_score, ai_action_plans</td></tr>
+<tr><td>Harga pangan dan ML</td><td>pangan_runs, pangan_models, pangan_history, pangan_forecasts, pangan_alerts</td></tr></table></section>
+
+
+<section id="sql"><div class="hd"><h2>6. Script SQL & Seed Data (opsional)</h2><div class="acts"><a class="btn main" data-link="sql">Buka file SQL</a><button data-k="sql"></button></div></div>
+<p>Ekspor skema lengkap dari Supabase (Schema Visualizer, Copy as SQL) ke file <code>schema.sql</code>, lalu tambahkan seed berikut. Seed hanya berisi data fiktif; <code>user_id</code> harus berisi id akun yang ada di <code>auth.users</code>.</p>
+<pre>-- Tabel tambahan untuk bot Telegram (ringkas)
+create table if not exists telegram_link_codes (
+  code text primary key,
+  auth_user_id uuid not null references auth.users(id) on delete cascade,
+  expires_at timestamptz not null, used_at timestamptz,
+  created_at timestamptz not null default now());
+alter table transactions add column if not exists source text not null default 'web';
+alter table transactions add column if not exists account text;
+
+-- Seed contoh (data fiktif)
+insert into budgets (user_id, name, amount, period_start, period_end, status)
+values ('&lt;UUID-PENGGUNA&gt;', 'Uang belanja', 2000000, '2026-11-01', '2026-11-30', 'active');
+insert into transactions (user_id, type, category, title, item, amount, source, status, transaction_date)
+values ('&lt;UUID-PENGGUNA&gt;', 'expense', 'belanja-dapur', 'Beras', 'Beras', 75000, 'web', 'confirmed', '2026-11-03'),
+       ('&lt;UUID-PENGGUNA&gt;', 'expense', 'tabungan', 'Nabung', 'Nabung', 200000, 'web', 'confirmed', '2026-11-04');</pre></section>
+
+<section id="api"><div class="hd"><h2>7. Dokumentasi API</h2><div class="acts"><a class="btn main" data-link="api">Buka dokumen lengkap</a><button data-k="api"></button></div></div>
+<p>Semua endpoint di bawah <code>/api</code> membutuhkan login (token Supabase Auth di header <code>Authorization: Bearer</code>), kecuali register dan login.</p>
+<div class="tw"><table><tr><th>Metode dan alamat</th><th>Request / response</th></tr>
+<tr><td>GET /api/action-plans</td><td>Login: Publik atau diperiksa di tempat lain (cek manual). Keluar: <code>{ success: false, message: "Unauthorized" }, { status: 401 }</code></td></tr>
+<tr><td>POST /api/action-plans</td><td>Login: Publik atau diperiksa di tempat lain (cek manual). Keluar: <code>{ success: false, message: "Data tidak lengkap" }, { status: 400 }</code></td></tr>
+<tr><td>PUT /api/action-plans</td><td>Login: Publik atau diperiksa di tempat lain (cek manual). Keluar: <code>{ success: false, message: "ID plan tidak ditemukan" }, { status: 400 }</code></td></tr>
+<tr><td>POST /api/advisor/chat</td><td>Login: Wajib login. Masuk: <code>message: string, city?: string</code>. Keluar: <code>{ reply: dataAi.reply, suggestion: dataAi.suggestion || undefined, incomeIdea: selectedIdea, source: "ai", }</code></td></tr>
+<tr><td>POST /api/auth/login</td><td>Login: Publik atau diperiksa di tempat lain (cek manual). Masuk: <code>email: string, password: string</code>. Keluar: <code>{ user: publicUser(user), telegramConnected: telegram.connected }, { headers: { "Set-Cookie": sessionCookie(user.id) } }</code></td></tr>
+<tr><td>POST /api/auth/logout</td><td>Login: Publik atau diperiksa di tempat lain (cek manual). Keluar: <code>{ ok: true }, { headers: { "Set-Cookie": clearSessionCookie() } }</code></td></tr>
+<tr><td>GET /api/auth/me</td><td>Login: Opsional. Keluar: <code>{ user: user ? publicUser(user) : null }</code></td></tr>
+<tr><td>POST /api/auth/register</td><td>Login: Publik atau diperiksa di tempat lain (cek manual). Masuk: <code>name: string, email: string, password: string</code>. Keluar: <code>{ user: publicUser(user) }, { status: 201, headers: { "Set-Cookie": sessionCookie(user.id) } }</code></td></tr>
+<tr><td>GET /api/budgets</td><td>Login: Wajib login. Keluar: <code>{ budgets: data || [] }</code></td></tr>
+<tr><td>POST /api/budgets</td><td>Login: Wajib login. Keluar: <code>{ budget: data }, { status: 201 }</code></td></tr>
+<tr><td>GET /api/forecast/prices</td><td>Login: Publik atau diperiksa di tempat lain (cek manual). Keluar: <code>{ error: 'Gagal mengambil data harga' }, { status: 500 }</code></td></tr>
+<tr><td>GET /api/health</td><td>Login: Publik atau diperiksa di tempat lain (cek manual). Keluar: <code>{ ok: true, time: new Date().toISOString() }</code></td></tr>
+<tr><td>GET /api/profile</td><td>Login: Wajib login. Keluar: <code>{ user: publicUser(await requireUser(request)) }</code></td></tr>
+<tr><td>PATCH /api/profile</td><td>Login: Wajib login. Masuk: <code>name: string, email: string</code>. Keluar: <code>{ user: publicUser(updated) }</code></td></tr>
+<tr><td>POST /api/scoring</td><td>Login: Publik atau diperiksa di tempat lain (cek manual). Keluar: <code>{ success: true, data: hasilSkor }, { status: 200 }</code></td></tr>
+<tr><td>POST /api/telegram/link</td><td>Login: Wajib login. Keluar: <code>{ token, deeplink: `https://t.me/${env.telegramBotUsername}?start=${token}`, expiresInMinutes: 15, }</code></td></tr>
+<tr><td>GET /api/telegram/status</td><td>Login: Wajib login. Keluar: <code>await db.getTelegramStatus(user.id)</code></td></tr>
+<tr><td>GET /api/transactions</td><td>Login: Wajib login. Keluar: <code>{ periods: buildPeriods(all.map((t) =&gt; t.period)), accounts: DEFAULT_ACCOUNTS, transactions, }</code></td></tr>
+<tr><td>POST /api/transactions</td><td>Login: Wajib login. Masuk: <code>flow: salah satu: ["in", "out"], cat: string, title: string, amount: number</code>. Keluar: <code>{ transaction: mapRowToTransaction(data) }, { status: 201 }</code></td></tr></table></div>
+<h3>Webhook bot Telegram</h3><p>Fungsi Supabase <code>telegram-bot</code> menerima POST dari Telegram dan menolak permintaan tanpa header <code>x-telegram-bot-api-secret-token</code> yang cocok.</p></section>
+
+<section id="ai"><div class="hd"><h2>8. Dokumentasi Fitur AI</h2><div class="acts"><a class="btn main" data-link="ai">Buka dokumen lengkap</a><button data-k="ai"></button></div></div>
+
+<h3>Tiga komponen cerdas</h3><div class="tw"><table><tr><th>Komponen</th><th>Teknologi</th><th>Peran</th></tr>
+<tr><td>Saran dari skor dan ide pemasukan</td><td>Google Gemini, dipanggil dari server</td><td>Menulis ringkasan dan langkah singkat; untuk skor 0-39 memilih ide dari katalog</td></tr>
+<tr><td>Prediksi harga pangan</td><td>Machine learning dari data PIHPS</td><td>Perkiraan harga sebagai rentang atau arah</td></tr>
+<tr><td>Pembaca pesan Telegram</td><td>Aturan kata kunci (tanpa AI)</td><td>Mengenali nominal, kategori, dan jenis catatan</td></tr></table></div>
+<h3>Alur saran AI</h3><ol><li>Skor dihitung rumus biasa (<code>lib/scoring.js</code>), bukan AI.</li><li>Server mengirim hanya angka ringkasan: skor, status, nilai dimensi, persentase kategori.</li><li>Balasan diminta berbentuk JSON dan diperiksa skema (zod).</li><li>Gagal atau lambat: saran cadangan dari aturan biasa tampil.</li><li>Skor 0-39 dan bukan sementara: pengguna menekan tombol, menjawab modal, waktu, dan keahlian; aturan menyaring katalog (<code>lib/incomeIdeas.js</code>), dan AI hanya memilih id dari hasil saringan.</li></ol>
+<h3>Pengaman dan privasi</h3><ul><li>Nama, email, dan judul transaksi tidak dikirim; email dan nomor telepon di dalam teks memblokir pengiriman.</li><li>Kunci API hanya di server (<code>GEMINI_API_KEY</code> di .env.local dan Vercel), tanpa awalan NEXT_PUBLIC_.</li><li>Ide usaha hanya tampil setelah diperiksa tim dan tidak memuat janji penghasilan.</li><li>Paket gratis Google dapat memakai data kiriman untuk pengembangan produk.</li><li>Bukan nasihat keuangan; prediksi adalah perkiraan.</li></ul>
+<h3>Variabel lingkungan</h3><p><code>AI_SERVICE_URL</code>, <code>GEMINI_API_KEY</code>, <code>GEMINI_MODEL</code></p></section>
+
+<section id="github"><div class="hd"><h2>9. GitHub & README</h2><div class="acts"><a class="btn main" data-link="github">Buka repositori</a><button data-k="github"></button></div></div>
+
+<div class="hd"><h3>Templat README.md</h3><button id="cp">Salin README</button></div>
+<pre id="readme"># SAKUPUAN
+Dapur Tenang, Dompet Senang. Website pencatatan uang belanja untuk ibu rumah tangga: tahu lebih awal apakah uang belanja pangan cukup sampai periode berikutnya.
+
+Demo: sakupuan.vercel.app
+
+## Fitur
+- Pencatatan pengeluaran dan pemasukan lewat bot Telegram
+- Sisa uang belanja, skor finansial, dan saran dari AI
+- Perkiraan harga pangan (data PIHPS)
+- Ide pemasukan tambahan dari katalog (skor 0-39)
+
+## Teknologi
+Next.js, Supabase (database, Auth, Edge Function), Vercel, Telegram Bot API, Google Gemini API
+
+## Menjalankan di komputer
+Prasyarat: Node.js 20 atau lebih baru, akun Supabase, token bot dari @BotFather, kunci Gemini.
+
+1. git clone https://github.com/nrizkaandina/ra-kartini.git lalu cd main
+2. npm install
+3. Salin .env.example menjadi .env.local lalu isi:
+   NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY,
+   TELEGRAM_BOT_TOKEN, TELEGRAM_WEBHOOK_SECRET, TELEGRAM_BOT_USERNAME, AI_SERVICE_URL
+   GEMINI_API_KEY, GEMINI_MODEL
+4. Buat tabel: jalankan schema.sql di SQL Editor Supabase (seed opsional: seed.sql)
+5. npm run dev lalu buka http://localhost:3000
+
+## Fitur AI
+Skor dihitung rumus biasa (lib/scoring.js). Server mengirim hanya angka ringkasan ke Gemini (lib/gemini.js), balasan JSON diperiksa skema, dan saran cadangan dipakai bila AI gagal. Untuk skor 0-39, AI hanya memilih ide dari katalog (lib/incomeIdeas.js). Uji kunci: node --env-file=.env.local scripts/uji-gemini.mjs
+
+## Bot Telegram
+Kode di supabase/functions/telegram-bot. Pasang dengan: npx supabase functions deploy telegram-bot --no-verify-jwt, lalu daftarkan webhook dengan secret_token.
+
+## Keterbatasan
+Prediksi adalah perkiraan, saran usaha adalah inspirasi, dan SAKUPUAN bukan nasihat keuangan.
+
+## Tim
+Nurviani Rizka Andina - Project Manager | Business Analyst | Full-Stack Developer | DevOps Engineer
+Siti Nur'aisa Mansur - UX Researcher | Front-End Developer | QA | Copywriter</pre></section>
+
+
+<section id="vercel"><div class="hd"><h2>10. Website di Vercel</h2><div class="acts"><a class="btn main" data-link="vercel">Buka website</a><button data-k="vercel"></button></div></div>
+<ul><li>Variabel lingkungan sudah diisi di Vercel dan sudah deploy ulang.</li><li>Uji: daftar akun, login, catat transaksi, sambungkan Telegram, lihat skor dan saran AI.</li></ul></section>
+
+<section id="deck"><div class="hd"><h2>11. Deck Presentasi</h2><div class="acts"><a class="btn main" data-link="deck">Buka deck</a><button data-k="deck"></button></div></div></section>
+</div>
+
+<script>
+
+const LINKS = {
+  prd: "https://docs.google.com/document/d/1xprKTAe-U2cbK8snSPbFhZauir3yMxlkqRyS3y_AQVY/edit?usp=drive_link", stories: "https://docs.google.com/document/d/1fNeD7hQw29IBUK0i4BAm0vcrgr37SDwH/edit?usp=drive_link&ouid=103783429256590952476&rtpof=true&sd=true", flow: "https://docs.google.com/document/d/1kjvzpB3DnkBB1IZ2tMn2AHjegpH3JPN0/edit?usp=drive_link&ouid=103783429256590952476&rtpof=true&sd=true",
+  figma: "https://geo-upper-99899384.figma.site",
+  erd: "https://drive.google.com/file/d/1IEoxbbqGBDgRCKmvOpRZyJefbOpsLW0x/view?usp=drive_link", sql: "https://drive.google.com/drive/folders/1b5DKw1PqNUvZgW4IgB-2MlumFKWUaCw-?usp=drive_link", api: "https://github.com/nrizkaandina/ra-kartini/blob/f60a4f4d71e5907ddd40de3f628c7c6c3d9993bb/docs/API.md", ai: "https://github.com/nrizkaandina/ra-kartini/blob/f60a4f4d71e5907ddd40de3f628c7c6c3d9993bb/docs/AI.md",
+  github: "https://github.com/nrizkaandina/ra-kartini.git",
+  vercel: "https://sakupuan.vercel.app",
+  deck: "https://drive.google.com/drive/folders/1mUqlwMAVa_q-a_sou4mo2hUAFHso5Y_T?usp=drive_link"
+};
+// true = tampilan untuk penilai (tanpa tombol "Tandai siap" dan petunjuk pengisian). Ubah ke false saat mengedit sendiri.
+const MODE_PENILAI = true;
+
+document.querySelectorAll("[data-link]").forEach(a => {
+  const u = LINKS[a.dataset.link];
+  if (u) {
+    a.href = u;
+    a.target = "_blank";
+    a.rel = "noopener";
+  } else {
+    a.classList.add("off");
+    a.title = "Isi alamat di const LINKS pada file ini";
+  }
+});
+
+if (MODE_PENILAI) {
+  document.querySelectorAll("[data-k], .bar, #pg, .note").forEach(e => {
+    e.style.display = "none";
+  });
+}
+</script>
+</body>
+</html>

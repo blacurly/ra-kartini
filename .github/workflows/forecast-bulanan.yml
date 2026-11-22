@@ -1,0 +1,37 @@
+name: Forecast harga pangan 6 bulan
+
+on:
+  push:
+    paths:
+      - "forecast/data/**"        # jalan otomatis kalau CSV berubah
+  schedule:
+    - cron: "0 1 2 * *"           # tanggal 2 tiap bulan, 08:00 WIB
+  workflow_dispatch: {}
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: forecast   # semua perintah dijalankan di folder forecast/
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: forecast/requirements.txt
+
+      - run: pip install -r requirements.txt
+
+      - name: Jalankan forecast
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          DATA_PATH: data/harga_pangan.csv
+          HORIZON_MONTHS: "6"
+          ALERT_THRESHOLD_PCT: "10"
+          ALERT_REQUIRE_CONFIDENT: "true"
+        run: python forecast_batch.py
